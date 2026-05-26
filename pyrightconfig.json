@@ -1,0 +1,10 @@
+{
+  "venvPath": ".",
+  "venv": "myvenv",
+  "pythonVersion": "3.14",
+  "include": ["."],
+  "apiRouter": {
+    "enabled": true,
+    "strict": true
+  }
+}

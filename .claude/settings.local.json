@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(pip install *)"
+      "PowerShell(pip install *)",
+      "PowerShell(& C:\\\\Users\\\\Mati\\\\Bubbletea2\\\\myvenv\\\\Scripts\\\\pip.exe install types-PyMySQL)"
     ]
   }
 }
