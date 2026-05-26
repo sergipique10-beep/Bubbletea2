@@ -8,10 +8,7 @@ router = APIRouter()
 
 @router.get("/bubbleteas")
 def get_productos() -> list[models.bubbletea.BubbleTea]:
-    with get_connection().cursor() as cursor:
-        cursor.execute("SELECT * FROM bubble_teas WHERE active = 1")
-        result = cursor.fetchall()
-        return [models.bubbletea.BubbleTea(**row) for row in result]
+    return filter_out_inactive_productos()
 
 
 @router.get("/bubbleteasfromaiven/{id}")
