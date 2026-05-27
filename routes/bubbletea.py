@@ -5,12 +5,6 @@ from utils.db_connection import get_connection
 
 router = APIRouter()
 
-
-@router.get("/bubbleteas")
-def get_productos() -> list[models.bubbletea.BubbleTea]:
-    return filter_out_inactive_productos()
-
-
 @router.get("/bubbleteasfromaiven/{id}")
 def get_bubble_tea_from_aiven(id: int) -> models.bubbletea.BubbleTea:
     with get_connection().cursor() as cursor:
